@@ -26,4 +26,13 @@ catch (error) {
 const data: unknown = "New data value";
 const strData : string = data as string; // Type assertion to string
 
-// Never in TypeScript
+// Never in TypeScript 
+//The never type is used for functions that never return a value.
+
+// Function always throws an error
+function throwError(message: string): never {
+  throw new Error(message);
+}
+
+// Calling the function
+throwError("Something went wrong!");
